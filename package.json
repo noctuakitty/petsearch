@@ -1,0 +1,26 @@
+{
+  "name": "petsearch",
+  "version": "1.0.0",
+  "description": "# MVP Set up appointments, search for adoptable pets near user, search for adoption events near user, save login info (zip code, pets looking for, ages looking for, ect.),",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norwayflames/petsearch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/norwayflames/petsearch/issues"
+  },
+  "homepage": "https://github.com/norwayflames/petsearch#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.9.19"
+  }
+}

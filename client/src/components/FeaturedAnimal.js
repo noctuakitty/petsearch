@@ -14,3 +14,7 @@ function FeaturedAnimal(props) {
 }
 
 export default FeaturedAnimal;
+
+// REACT_APP_API_KEY = N8GeiieoVoNpVxmvozyKUYUvCajYJSrXMVMO5zAaWESD7jb6GD
+
+// REACT_APP_API_SECRET = FsKYSlDwvn98riFhjnH2OYzWh6qr9G3BY7QFcETE

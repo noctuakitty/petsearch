@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "devStart": "nodemon node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +20,19 @@
   "homepage": "https://github.com/norwayflames/petsearch#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "ejs": "^3.1.3",
     "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.9.19"
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.19",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
   }
 }

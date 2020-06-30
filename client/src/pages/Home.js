@@ -21,11 +21,12 @@ class Home extends Component {
   searchAnimals = () => {
     client.animal
       .search({
-        type: "cat",
+        type: "rabbit",
         location: "80221"
       })
 
       .then((response) => {
+        console.log(response.data.animals[0]);
         this.setState({
           //   results: response.data.animals,
           featuredPhoto: response.data.animals[0].primary_photo_cropped.medium,

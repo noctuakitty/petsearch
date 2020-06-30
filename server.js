@@ -10,7 +10,6 @@ const bcrypt = require("bcrypt")
 const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session")
-
 const initializePassport = require("./passport-config");
 const { Router } = require("express");
 initializePassport(
@@ -22,8 +21,10 @@ passport,
 const users= []
 
 app.set("view-engine", "ejs")
+app.use(express.static("register"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(logger("dev"));
 app.use(flash())
 app.use(session({
   secret: process.env.SESSION_SECRET,

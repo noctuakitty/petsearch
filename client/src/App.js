@@ -13,24 +13,4 @@ function App() {
 
 export default App;
 
-// // click event to save pets
-// $("#savePet").on("click", function () {
-//   $.ajax({
-//     type: "POST",
-//     url: "/saved",
-//     dataType: "json",
-//     data: {
-//       //list out information we are collecting for each pet and place here as examples below.
-//       // title: $("#title").val(),
-//       // author: $("#author").val(),
-//       // created: Date.now()
-//     }
-//   }).then(function (data) {
-//     console.log(data);
-//     getUnread();
-//     $("#author").val("");
-//     $("#title").val("");
-//   }
-//   );
-//   return false;
-// });
+

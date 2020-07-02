@@ -21,7 +21,7 @@ class Home extends Component {
   searchAnimals = () => {
     client.animal
       .search({
-        type: "rabbit",
+        type: "dog",
         location: "80221"
       })
       .then((response) => {

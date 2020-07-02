@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "# MVP Set up appointments, search for adoptable pets near user, search for adoption events near user, save login info (zip code, pets looking for, ages looking for, ect.),",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "devStart": "nodemon node server.js"
-  },
+  // "scripts": {
+  //   "test": "echo \"Error: no test specified\" && exit 1",
+  //   "start": "node server.js",
+  //   "devStart": "nodemon node server.js"
+  // },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/norwayflames/petsearch.git"
@@ -27,6 +27,7 @@
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "method-override": "^3.0.0",
+    "mongodb": "^3.5.9",
     "mongoose": "^5.9.19",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"

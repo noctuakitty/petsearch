@@ -24,17 +24,29 @@ class Home extends Component {
         type: "rabbit",
         location: "80221"
       })
-
       .then((response) => {
+        let featuredAnimal = response.data.animals[0];
+        let featuredImage = "";
+
+        const animalsWithImages = response.data.animals.filter(
+          (animal) =>
+            animal.primary_photo_cropped && animal.primary_photo_cropped.medium
+        );
+
+        if (animalsWithImages.length > 0) {
+          featuredAnimal = animalsWithImages[0];
+          featuredImage = featuredAnimal.primary_photo_cropped.medium;
+        }
+
         console.log(response.data.animals[0]);
         this.setState({
           //   results: response.data.animals,
-          featuredPhoto: response.data.animals[0].primary_photo_cropped.medium,
-          featuredName: response.data.animals[0].name,
-          featuredSpecies: response.data.animals[0].species,
-          featuredBreed: response.data.animals[0].breeds.primary,
-          featuredGender: response.data.animals[0].gender,
-          featuredStatus: response.data.animals[0].status
+          featuredPhoto: featuredImage,
+          featuredName: featuredAnimal.name,
+          featuredSpecies: featuredAnimal.species,
+          featuredBreed: featuredAnimal.breeds.primary,
+          featuredGender: featuredAnimal.gender,
+          featuredStatus: featuredAnimal.status
         });
         console.log(this.state.results);
         // Do something with `response.data.animals`

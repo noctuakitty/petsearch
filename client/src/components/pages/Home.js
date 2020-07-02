@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FeaturedAnimal from "../components/FeaturedAnimal";
+import FeaturedAnimal from "./../FeaturedAnimal";
 
 var petfinder = require("@petfinder/petfinder-js");
 var client = new petfinder.Client({

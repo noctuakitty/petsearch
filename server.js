@@ -12,6 +12,7 @@ const flash = require("express-flash");
 const session = require("express-session")
 const initializePassport = require("./passport-config");
 const { Router } = require("express");
+const config = require("config");
 initializePassport(
   passport,
   (email) => users.find((user) => user.email === email),
@@ -107,12 +108,12 @@ app.delete("/logout", (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/users");
+mongoose.connect(process.env.MONGODB_URI || config.get("mongoURI"));
 mongoose.connection
   .once("open", function () {
     console.log("Connection has been made!");
   })
-  .on("error", function () {
+  .on("error", function (error) {
     console.log("Connection Error:", error);
   });
 

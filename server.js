@@ -108,7 +108,10 @@ app.delete("/logout", (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || config.get("mongoURI"));
+mongoose.connect(process.env.MONGODB_URI || config.get("mongoURI"), {
+    useUnifiedTopology: true,
+    useNewUrlParser:  true
+});
 mongoose.connection
   .once("open", function () {
     console.log("Connection has been made!");

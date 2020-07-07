@@ -18,7 +18,7 @@ class Search extends Component {
                             <div>
                                 <img src="placeholder-300x300.jpg"></img>
                                 <p>
-                                    Hi! I'm -NAMEHERE- and I'm a -SPESIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
+                                    Hi! I'm -NAMEHERE- and I'm a -SPECIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
                                     </p>
                             </div>
                         </div>
@@ -26,7 +26,7 @@ class Search extends Component {
                             <div>
                                 <img src="placeholder-300x300.jpg"></img>
                                 <p>
-                                    Hi! I'm -NAMEHERE- and I'm a -SPESIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
+                                    Hi! I'm -NAMEHERE- and I'm a -SPECIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
                                     </p>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ class Search extends Component {
                             <div>
                                 <img src="placeholder-300x300.jpg"></img>
                                 <p>
-                                    Hi! I'm -NAMEHERE- and I'm a -SPESIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
+                                    Hi! I'm -NAMEHERE- and I'm a -SPECIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
                                     </p>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ class Search extends Component {
                             <div>
                                 <img src="placeholder-300x300.jpg"></img>
                                 <p>
-                                    Hi! I'm -NAMEHERE- and I'm a -SPESIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
+                                    Hi! I'm -NAMEHERE- and I'm a -SPECIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
                                     </p>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ class Search extends Component {
                             <div>
                                 <img src="placeholder-300x300.jpg"></img>
                                 <p>
-                                    Hi! I'm -NAMEHERE- and I'm a -SPESIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
+                                    Hi! I'm -NAMEHERE- and I'm a -SPECIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home? 
                                     </p>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ class Search extends Component {
                             <div>
                                 <img src="placeholder-300x300.jpg"></img>
                                 <p>
-                                    Hi! I'm -NAMEHERE- and I'm a -SPESIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home?
+                                    Hi! I'm -NAMEHERE- and I'm a -SPECIES-. Specifically a -BREED-. I'm currently up for adoption! Will you bring me home?
                                     </p>
                             </div>
                         </div>

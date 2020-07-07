@@ -7,48 +7,53 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/pages/Home';
+import Events from './components/pages/Events';
+import Login from './components/pages/Login';
+import Search from './components/pages/Search';
+import SignUp from './components/pages/SignUp';
 
-export default function App() {
+function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <div class="container">
+        <a class="navbar-brand" href="/">Home</a>
+        </div>
+        <div class="container">
+        <a class="navbar-brand" href="/login">Login</a>
+        </div>
+        <div class="container">
+        <a class="navbar-brand" href="/events">Events</a>
+        </div>
+        <div class="container">
+        <a class="navbar-brand" href="/search">Search</a>
+        </div>
+        <div class="container">
+        <a class="navbar-brand" href="/signup">Sign Up</a>
+        </div>
+      </nav>
 
-        {/* A <Switch> looks through its children <Route>s and
+      {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/events">
+          <Events />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/search">
+          <Search />
+        </Route>
+        <Route exact path="/signup">
+          <SignUp />
+        </Route>
+      </Switch>
     </Router>
   );
 }
 
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
-
+export default App;

@@ -13,5 +13,8 @@ export default{
     },
     logOut: function () {
         return axios.get("/logout")
+    },
+    getPetFinder: function(petInfo) {
+        return axios.post("/api/petfinder",petInfo)
     }
 }

@@ -132,9 +132,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/users");
 //     console.log("Connection Error:", error);
 //   });
 
-  if (process.env.NODE_ENV !== "production") {
-    require("dotenv").config();
-  }
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 
 // Start the API server

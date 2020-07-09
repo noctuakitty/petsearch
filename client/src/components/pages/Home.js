@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import FeaturedAnimal from "./../FeaturedAnimal";
 
-var petfinder = require("@petfinder/petfinder-js");
-var client = new petfinder.Client({
-  apiKey: process.env.REACT_APP_API_KEY,
-  secret: process.env.REACT_APP_API_SECRET
-});
 
 class Home extends Component {
   state = {
@@ -18,44 +13,7 @@ class Home extends Component {
     featuedStatus: ""
   };
 
-  searchAnimals = () => {
-    client.animal
-      .search({
-        type: "dog",
-        location: "80221",
-        breed: ""
-      })
-      .then((response) => {
-        let featuredAnimal = response.data.animals[0];
-        let featuredImage = "";
-
-        const animalsWithImages = response.data.animals.filter(
-          (animal) =>
-            animal.primary_photo_cropped && animal.primary_photo_cropped.medium
-        );
-
-        if (animalsWithImages.length > 0) {
-          featuredAnimal = animalsWithImages[0];
-          featuredImage = featuredAnimal.primary_photo_cropped.medium;
-        }
-
-        console.log(response.data.animals[0]);
-        this.setState({
-          //   results: response.data.animals,
-          featuredPhoto: featuredImage,
-          featuredName: featuredAnimal.name,
-          featuredSpecies: featuredAnimal.species,
-          featuredBreed: featuredAnimal.breeds.primary,
-          featuredGender: featuredAnimal.gender,
-          featuredStatus: featuredAnimal.status
-        });
-        console.log(this.state.results);
-        // Do something with `response.data.animals`
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
+ 
 
   componentDidMount() {
     this.searchAnimals();

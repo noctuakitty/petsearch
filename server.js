@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3001;
 // const bcrypt = require("bcrypt");
 const passport = require("passport");
 // const flash = require("express-flash");
+
 const session = require("express-session")
 
 const apiRoutes = require("./routes/apiRoutes")
@@ -27,6 +28,7 @@ app.use(express.json());
 
 // Express Session
 app.use(session({
+
   secret: 'secret',
   saveUninitialized: true,
   resave: true
@@ -120,6 +122,7 @@ app.use(apiRoutes)
 // });
 
 // Connect to the Mongo DB
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/users");
 // mongoose.connection
 //   .once("open", function () {
@@ -132,6 +135,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/users");
   if (process.env.NODE_ENV !== "production") {
     require("dotenv").config();
   }
+
 
 // Start the API server
 app.listen(PORT, function () {

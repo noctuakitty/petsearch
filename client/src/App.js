@@ -36,20 +36,15 @@ function App() {
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route exact path="/">
-          <Home />
+        <Route exact path="/" component={Home}>
         </Route>
-        <Route exact path="/events">
-          <Events />
+        <Route path="/events" component={Events}>
         </Route>
-        <Route exact path="/login">
-          <Login />
+        <Route path="/login" component={Login}>
         </Route>
-        <Route exact path="/search">
-          <Search />
+        <Route path="/search" component={Search}>
         </Route>
-        <Route exact path="/signup">
-          <SignUp />
+        <Route path="/signup" component={SignUp}>
         </Route>
       </Switch>
     </Router>

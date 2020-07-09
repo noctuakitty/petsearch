@@ -22,7 +22,8 @@ class Home extends Component {
     client.animal
       .search({
         type: "dog",
-        location: "80221"
+        location: "80221",
+        breed: ""
       })
       .then((response) => {
         let featuredAnimal = response.data.animals[0];

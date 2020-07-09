@@ -8,6 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const bcrypt = require("bcrypt");
 const passport = require("passport");
+const passportfolder = require('./passport/');
 const flash = require("express-flash");
 const session = require("express-session")
 const initializePassport = require("./passport-config");
@@ -41,6 +42,8 @@ app.use(
     saveUninitialized: false
   })
 );
+app.use(passportfolder.initialize());
+// app.use(passportfolder.session());
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -107,7 +110,10 @@ app.delete("/logout", (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/users");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/users",
+{useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 mongoose.connection
   .once("open", function () {
     console.log("Connection has been made!");

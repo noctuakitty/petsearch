@@ -1,20 +1,30 @@
-var mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
-// Save a reference to the Schema constructor
-var Schema = mongoose.Schema;
-
-// Using the Schema constructor, create a new UserSchema object
-// This is similar to a Sequelize model
-var UserSchema = new Schema({
-  // `title` is of type String
-  name: String,
-  // `body` is of type String
-  email: String,
-  password: String
+// User Schema
+const UserSchema = mongoose.Schema({
+  username: {
+    type: String,
+    index:true
+  },
+  password: {
+    type: String
+  },
+  email: {
+    type: String
+  },
+  name: {
+    type: String
+  }
 });
 
-// This creates our model from the above schema, using mongoose's model method
-var User = mongoose.model("User", UserSchema);
+const User = module.exports = mongoose.model('User', UserSchema);
 
-// Export the User model
-module.exports = User;
+module.exports.createUser = function(newUser, callback){
+  bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.hash(newUser.password, salt, function(err, hash) {
+      newUser.password = hash;
+      newUser.save(callback);
+    });
+  });
+}

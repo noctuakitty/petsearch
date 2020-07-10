@@ -1,9 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 
-const SignUp = () => {
-return (
-    <h1>Sign Up</h1>
-);
-};
-
-export default SignUp;
+export default class SignUp extends Component {
+    render() {
+        return(
+            <div>
+                <h1>Sign Up</h1>
+            </div>
+        );
+    }
+}

@@ -28,15 +28,4 @@ router.post("/signup", (req, res, next) => {
     passport.authenticate("local", options, callback)(req, res, next);
 });
 
-// router.post('/signup', passport.authenticate('local-signup',{
-//     successRedirect: '/',
-//     failureRedirect: '/home',
-//     session: false
-// })
-// );
-
-// router.post('/signin', function(req, res, next){
-//     console.log(req.body);
-// });
-
 module.exports = router; 

@@ -19,7 +19,7 @@ const EventCalendar = require('react-event-calendar');
         },
     ];
 
-class EventsPage extends Component {
+class Events extends Component {
     render() {
         return (
             <div>
@@ -34,4 +34,4 @@ class EventsPage extends Component {
     }
 }
 
-export default EventsPage;
+export default Events;

@@ -16,37 +16,6 @@ const events = [
     },
 ];
 
-class Child extends React.Component {
-    render() {
-      return (<div><Events /></div>);
-    }
-  }
-
-  class ShowHide extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        childVisible: false
-      }
-    }
-
-    render() {
-      return (
-        <div>
-          {
-            this.state.childVisible
-              ? <Child />
-              : null
-          }
-        </div>
-      )
-    }
-
-    onClick() {
-      this.setState(prevState => ({ childVisible: !prevState.childVisible }));
-    }
-  }
-
 console.log(events);
 
 function Events() {

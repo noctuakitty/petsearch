@@ -1,9 +1,25 @@
 import React from "react";
-import Calendar from "../Calendar";
 import Events from '../Events';
+import Calendar from '../Calendar';
 
 
-function EventsPage() {
+
+class EventsPage extends React.Component {
+
+    state = {
+        isHidden: true
+    }
+
+    FindEvents = event => {
+        event.preventDefault();
+        if (this.state.isHidden) {
+            this.setState({isHidden:false})
+        } else {
+            this.setState({isHidden:true})
+        }
+    }
+
+    render () {
     return (
         <div className="container">
             <div className="jumbotron">
@@ -20,13 +36,15 @@ function EventsPage() {
                     placeholder="Enter Zip Code"
                     aria-label="Search"
                 />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+                <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick = {this.FindEvents}>
                     Find Events
-        </button>
+                </button>
             </form>
             <Calendar />
-            <Events />
+            {this.state.isHidden ?(""):(<Events />)}
         </div>
     );
 }
+}
+
 export default EventsPage;

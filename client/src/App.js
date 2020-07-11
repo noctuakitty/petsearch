@@ -21,14 +21,8 @@ function App() {
         <div className="container">
         <a className="navbar-brand" href="/">Home</a>
         </div>
-<<<<<<< HEAD
-        
-        <div class="container">
-        <a class="navbar-brand" href="/login" >Login</a>
-=======
         <div className="container">
         <a className="navbar-brand" href="/login">Login</a>
->>>>>>> 45c95aca083d32293a1f9cf532a0be220ada0382
         </div>
         <div className="container">
         <a className="navbar-brand" href="/events">Events</a>

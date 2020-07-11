@@ -53,7 +53,6 @@ router.post("/api/petfinder", function (req, res) {
     .catch(function (error) {
       console.log(error);
     });
-
 })
 
 
@@ -95,4 +94,4 @@ router.get('/logout', function (req, res) {
   res.send(null)
 });
 
-module.exports = router
+module.exports = router;

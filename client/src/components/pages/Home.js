@@ -15,9 +15,9 @@ class Home extends Component {
 
  
 
-  componentDidMount() {
-    this.searchAnimals();
-  }
+  // componentDidMount() {
+  //   this.searchAnimals();
+  // }
 
   render() {
     return (

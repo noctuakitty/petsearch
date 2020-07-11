@@ -11,6 +11,8 @@ var client = new petfinder.Client({
   secret: process.env.REACT_APP_API_SECRET
 });
 
+console.log(client)
+
 router.post("/api/petfinder", function (req, res) {
 
   client.animal
@@ -53,7 +55,6 @@ router.post("/api/petfinder", function (req, res) {
     .catch(function (error) {
       console.log(error);
     });
-
 })
 
 
@@ -95,4 +96,4 @@ router.get('/logout', function (req, res) {
   res.send(null)
 });
 
-module.exports = router
+module.exports = router;

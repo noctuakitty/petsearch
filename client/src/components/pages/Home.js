@@ -12,7 +12,6 @@ class Home extends Component {
     featuedStatus: ""
   };
 
-=======
   componentDidMount() {
     this.FeaturedAnimal();
   }

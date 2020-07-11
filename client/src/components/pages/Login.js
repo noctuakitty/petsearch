@@ -3,11 +3,11 @@ import api from "../../utils/api";
 class Login extends React.Component {
     handleSubmit = (event) => {
       event.preventDefault()
-      console.log("Email: " + event.target.elements.email.value)
+      console.log("Username: " + event.target.elements.username.value)
       console.log("Password: " + event.target.elements.password.value)
 
       const userData = {
-        username: event.target.elements.email.value,
+        username: event.target.elements.username.value,
         password: event.target.elements.password.value
       }
       api.getLogin(userData).then(res => {
@@ -20,10 +20,10 @@ class Login extends React.Component {
         <form onSubmit={this.handleSubmit}>
             <h1>Login</h1>
           <label>
-            Email:
+            Username:
             <input
               type="text"
-              name="email"
+              name="username"
               ref={node => (this.inputNode = node)}
             />
           </label>

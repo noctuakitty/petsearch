@@ -3,7 +3,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 3001;
-// const bcrypt = require("bcrypt");
 const passport = require("passport");
 // const flash = require("express-flash");
 
@@ -20,8 +19,6 @@ const apiRoutes = require("./routes/apiRoutes");
 
 const users = [];
 
-// app.set("view-engine", "ejs")
-// app.use(express.static("register"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -122,15 +119,7 @@ app.use(apiRoutes);
 // });
 
 // Connect to the Mongo DB
-
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/users");
-// mongoose.connection
-//   .once("open", function () {
-//     console.log("Connection has been made!");
-//   })
-//   .on("error", function () {
-//     console.log("Connection Error:", error);
-//   });
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
@@ -140,3 +129,5 @@ if (process.env.NODE_ENV !== "production") {
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
+module.exports = app;

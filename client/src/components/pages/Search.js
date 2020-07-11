@@ -20,6 +20,7 @@ class Search extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault()
+        console.log(this.state.type, this.state.location, this.state.breeds)
         if (this.state.type && this.state.location && this.state.breeds) {
             API.getPetFinder({
                 type: this.state.type,

@@ -7,12 +7,14 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/pages/Home';
-import Events from './components/pages/Events';
+import EventsPage from './components/pages/EventsPage';
 import Login from './components/pages/Login';
 import Search from './components/pages/Search';
 import SignUp from './components/pages/SignUp';
+import './components/styles.css';
 
 function App() {
+
   return (
     <Router>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
@@ -38,7 +40,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}>
         </Route>
-        <Route path="/events" component={Events}>
+        <Route path="/events" component={EventsPage}>
         </Route>
         <Route path="/login" component={Login}>
         </Route>

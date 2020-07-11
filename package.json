@@ -4,14 +4,13 @@
   "description": "# MVP Set up appointments, search for adoptable pets near user, search for adoption events near user, save login info (zip code, pets looking for, ages looking for, ect.),",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "devStart": "nodemon node server.js",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
@@ -50,6 +49,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.4"
   }

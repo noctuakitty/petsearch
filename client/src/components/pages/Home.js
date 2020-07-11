@@ -74,6 +74,7 @@ class Home extends Component {
     ];
     var index = Math.floor(Math.random() * list.length);
     console.log(index);
+    console.log(list[index]);
     api
       .getPetFinder({
         type: list[index].type,

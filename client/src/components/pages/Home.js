@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import FeaturedAnimal from "./../FeaturedAnimal";
 
-
 class Home extends Component {
   state = {
     // results: [],
@@ -13,16 +12,21 @@ class Home extends Component {
     featuedStatus: ""
   };
 
- 
-
   componentDidMount() {
-    this.searchAnimals();
+    this.FeaturedAnimal();
   }
 
   render() {
     return (
-      <div className="jumbotron">
-        <h1>Welcome to fluffy</h1>
+      <div className="container">
+        <div className="jumbotron">
+          <h1>Welcome to Fluffy</h1>
+          <p>
+            With Fluffy you can find your new best friend without having to
+            visit the website of every shelter in your area. Signup and find
+            your Fluffy
+          </p>
+        </div>
         {/* {this.state.results.map((res) => (
           <FeaturedAnimal
             name={res.featuredName}

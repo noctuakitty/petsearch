@@ -17,22 +17,27 @@ function App() {
 
   return (
     <Router>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
-        <div class="container">
-        <a class="navbar-brand" href="/">Home</a>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <div className="container">
+        <a className="navbar-brand" href="/">Home</a>
         </div>
+<<<<<<< HEAD
         
         <div class="container">
         <a class="navbar-brand" href="/login" >Login</a>
+=======
+        <div className="container">
+        <a className="navbar-brand" href="/login">Login</a>
+>>>>>>> 45c95aca083d32293a1f9cf532a0be220ada0382
         </div>
-        <div class="container">
-        <a class="navbar-brand" href="/events">Events</a>
+        <div className="container">
+        <a className="navbar-brand" href="/events">Events</a>
         </div>
-        <div class="container">
-        <a class="navbar-brand" href="/search">Search</a>
+        <div className="container">
+        <a className="navbar-brand" href="/search">Search</a>
         </div>
-        <div class="container">
-        <a class="navbar-brand" href="/signup">Sign Up</a>
+        <div className="container">
+        <a className="navbar-brand" href="/signup">Sign Up</a>
         </div>
       </nav>
 

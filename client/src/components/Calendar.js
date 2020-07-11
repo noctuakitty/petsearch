@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
-import Events from './Events';
+
 
 const Frame = styled.div`
   width: 400px;

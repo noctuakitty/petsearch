@@ -15,21 +15,21 @@ import SignUp from './components/pages/SignUp';
 function App() {
   return (
     <Router>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
-        <div class="container">
-        <a class="navbar-brand" href="/">Home</a>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <div className="container">
+        <a className="navbar-brand" href="/">Home</a>
         </div>
-        <div class="container">
-        <a class="navbar-brand" href="/login">Login</a>
+        <div className="container">
+        <a className="navbar-brand" href="/login">Login</a>
         </div>
-        <div class="container">
-        <a class="navbar-brand" href="/events">Events</a>
+        <div className="container">
+        <a className="navbar-brand" href="/events">Events</a>
         </div>
-        <div class="container">
-        <a class="navbar-brand" href="/search">Search</a>
+        <div className="container">
+        <a className="navbar-brand" href="/search">Search</a>
         </div>
-        <div class="container">
-        <a class="navbar-brand" href="/signup">Sign Up</a>
+        <div className="container">
+        <a className="navbar-brand" href="/signup">Sign Up</a>
         </div>
       </nav>
 

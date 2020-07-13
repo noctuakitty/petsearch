@@ -12,7 +12,6 @@ class Home extends Component {
     featuredGender: "",
     featuredStatus: ""
   };
-
   componentDidMount() {
     var list = [
       {

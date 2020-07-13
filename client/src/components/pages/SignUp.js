@@ -57,6 +57,7 @@ class SignUp extends React.Component {
             />
           </label>
           <button type="submit">Submit</button>
+          <a href="/login">Already have an account login in here!</a>
         </form>
       )
     }

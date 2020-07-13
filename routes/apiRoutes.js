@@ -1,7 +1,8 @@
 
 const router = require("express").Router()
 const db = require("../models")
-require("dotenv").config()
+// to run locally uncomment line below, to deploy comment it out again
+// require("dotenv").config()
 var passport = require("passport")
 
 var petfinder = require("@petfinder/petfinder-js");

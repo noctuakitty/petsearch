@@ -16,5 +16,8 @@ export default{
     },
     getPetFinder: function(petInfo) {
         return axios.post("/api/petfinder",petInfo)
+    },
+    getRescueGroups: function(eventInfo) {
+        return axios.get("/api/rescuegroups", eventInfo)
     }
 }

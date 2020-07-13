@@ -10,12 +10,89 @@ class Home extends Component {
     featuredSpecies: "",
     featuredBreed: "",
     featuredGender: "",
-    featuedStatus: ""
+    featuredStatus: ""
   };
-
-  // componentDidMount() {
-  //   this.FeaturedAnimal();
-  // }
+  componentDidMount() {
+    var list = [
+      {
+        type: "dog",
+        breed: "labrador"
+      },
+      {
+        type: "dog",
+        breed: "terrier"
+      },
+      {
+        type: "dog",
+        breed: "golden doodle"
+      },
+      {
+        type: "dog",
+        breed: "poodle"
+      },
+      {
+        type: "dog",
+        breed: "pug"
+      },
+      {
+        type: "dog",
+        breed: "boxer"
+      },
+      {
+        type: "dog",
+        breed: "chow chow"
+      },
+      {
+        type: "cat",
+        breed: "maine coon"
+      },
+      {
+        type: "cat",
+        breed: "rag doll"
+      },
+      {
+        type: "cat",
+        breed: "tabby"
+      },
+      {
+        type: "cat",
+        breed: "calico"
+      },
+      {
+        type: "cat",
+        breed: "persian"
+      },
+      {
+        type: "cat",
+        breed: "mixed breed"
+      },
+      {
+        type: "cat",
+        breed: "siamese"
+      }
+    ];
+    var index = Math.floor(Math.random() * list.length);
+    console.log(index);
+    console.log(list[index]);
+    api
+      .getPetFinder({
+        type: list[index].type,
+        breed: list[index].breed
+      })
+      .then((pet) => {
+        console.log(pet);
+        this.setState({
+          featuredPhoto: pet.data.animals[0].primary_photo_cropped
+            ? pet.data.animals[0].primary_photo_cropped.small
+            : "https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483296.jpg",
+          featuredName: pet.data.animals[0].name,
+          featuredSpecies: pet.data.animals[0].species,
+          featuredBreed: pet.data.animals[0].breed,
+          featuredGender: pet.data.animals[0].gender,
+          featuredStatus: pet.data.animals[0].status
+        });
+      });
+  }
 
   render() {
     return (

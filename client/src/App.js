@@ -8,18 +8,16 @@ import {
   Redirect
 } from "react-router-dom";
 import Home from './components/pages/Home';
-import Events from './components/pages/Events';
+import EventsPage from './components/pages/EventsPage';
 import Login from './components/pages/Login';
 import Search from './components/pages/Search';
 import SignUp from './components/pages/SignUp';
 import PrivateRoute from "./PrivateRoute"
 import { AuthContext } from "./context/auth"
-
+import './components/styles.css';
 
 
 function App(props) {
-
-
   return (
     <AuthContext.Provider value= {false}>
     <Router>

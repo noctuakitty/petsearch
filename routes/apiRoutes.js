@@ -1,7 +1,7 @@
-
 const router = require("express").Router()
 const db = require("../models")
-require("dotenv").config()
+// to run locally uncomment line below, to deploy comment it out again
+// require("dotenv").config()
 var passport = require("passport")
 
 var petfinder = require("@petfinder/petfinder-js");
@@ -11,19 +11,19 @@ var client = new petfinder.Client({
   secret: process.env.REACT_APP_API_SECRET
 });
 
-router.post("/api/petfinder", function (req, res) {
+console.log(client);
 
+router.post("/api/petfinder", function (req, res) {
   client.animal
     .search({
       type: req.body.type,
       location: req.body.location,
-      breeds:{
-        primary:req.body.breed
+      breeds: {
+        primary: req.body.breed
       }
     })
     .then((response) => {
-
-      res.json(response.data)
+      res.json(response.data);
       // let featuredAnimal = response.data.animals[0];
       // let featuredImage = "";
 
@@ -53,14 +53,11 @@ router.post("/api/petfinder", function (req, res) {
     .catch(function (error) {
       console.log(error);
     });
-
-})
-
-
+});
 
 // Register User
-router.post('/register', function (req, res) {
-  console.log("new Users", req.body)
+router.post("/register", function (req, res) {
+  console.log("new Users", req.body);
   var newUser = new db.User({
     name: req.body.name,
     email: req.body.email,
@@ -70,29 +67,24 @@ router.post('/register', function (req, res) {
 
   db.User.createUser(newUser, function (err, user) {
     if (err) throw err;
-    res.send(user).end()
+    res.send(user).end();
   });
-
 });
 
 // Endpoint to login
-router.post('/login',
-  passport.authenticate('local'),
-  function (req, res) {
-    res.send(req.user);
-  }
-);
-
-// Endpoint to get current user
-router.get('/user', function (req, res) {
+router.post("/login", passport.authenticate("local"), function (req, res) {
   res.send(req.user);
-})
-
-
-// Endpoint to logout
-router.get('/logout', function (req, res) {
-  req.logout();
-  res.send(null)
 });
 
-module.exports = router
+// Endpoint to get current user
+router.get("/user", function (req, res) {
+  res.send(req.user);
+});
+
+// Endpoint to logout
+router.get("/logout", function (req, res) {
+  req.logout();
+  res.send(null);
+});
+
+module.exports = router;

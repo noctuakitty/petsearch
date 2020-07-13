@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import api from "../../utils/api";
+
 class Login extends React.Component {
+
     handleSubmit = (event) => {
       event.preventDefault()
       console.log("Username: " + event.target.elements.username.value)
@@ -13,8 +15,8 @@ class Login extends React.Component {
       api.getLogin(userData).then(res => {
         window.location.href = "/"
       })
-      
     }
+    
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
@@ -36,6 +38,7 @@ class Login extends React.Component {
             />
           </label>
           <button type="submit">Submit</button>
+          <a href="/signup">Don't have an account signup here!</a>
         </form>
       )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FeaturedAnimal from "./../FeaturedAnimal";
+import api from "../../utils/api";
 
 class Home extends Component {
   state = {
@@ -12,10 +13,9 @@ class Home extends Component {
     featuedStatus: ""
   };
 
-=======
-  componentDidMount() {
-    this.FeaturedAnimal();
-  }
+  // componentDidMount() {
+  //   this.FeaturedAnimal();
+  // }
 
   render() {
     return (

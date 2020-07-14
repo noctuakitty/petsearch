@@ -1,3 +1,41 @@
-.App {
+.App,
+body,
+.container,
+form,
+nav
+  {
   text-align: center;
+  font-family: 'Galada', cursive;
+  color: black;
+  text-shadow: whitesmoke -1px 1px 0;
+}
+
+body {
+  background-image: url("https://ak.picdn.net/shutterstock/videos/1009476485/thumb/3.jpg");
+  background-size: cover;
+  background-repeat: initial;
+  color: black;
+  text-shadow: whitesmoke -1px 1px 0;
+}
+
+.jumbotron,
+frame {
+  text-align: center;
+  font-family: 'Galada', cursive;
+  color: black;
+  text-shadow: whitesmoke -1px 1px 0;
+}
+
+.form-control {
+  text-align: center;
+  position: relative;
+  margin-left: 450px;
+  margin-right: auto;
+}
+
+.btn-dark {
+  text-align: center;
+  position: relative;
+  margin-left: 500px;
+  margin-right: auto;
 }

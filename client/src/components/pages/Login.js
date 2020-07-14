@@ -38,7 +38,7 @@ class Login extends React.Component {
             />
           </label>
           <button type="submit">Submit</button>
-          <a href="/signup">Don't have an account signup here!</a>
+          <a href="/signup">Don't have an account? Signup here!</a>
         </form>
       )
     }

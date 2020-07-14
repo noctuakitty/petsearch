@@ -7,6 +7,7 @@ const Frame = styled.div`
   width: 400px;
   border: 1px solid lightgrey;
   box-shadow: 2px 2px 2px #eee;
+  margin: auto
 `;
 
 const Header = styled.div`
@@ -26,6 +27,7 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  background-color: #f5f6fa;
 `;
 
 const Day = styled.div`

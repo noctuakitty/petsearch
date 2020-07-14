@@ -36,11 +36,11 @@ class EventsPage extends React.Component {
                     placeholder="Enter Zip Code"
                     aria-label="Search"
                 />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick = {this.FindEvents}>
-                    Find Events
-                </button>
             </form>
             <Calendar />
+            <button className="btn btn-dark my-2 my-sm-0" type="submit" onClick = {this.FindEvents}>
+                    Find Events
+                </button>
             {this.state.isHidden ?(""):(<Events />)}
         </div>
     );

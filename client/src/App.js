@@ -19,7 +19,7 @@ import './components/styles.css';
 
 function App(props) {
   return (
-    <AuthContext.Provider value= {false}>
+    <AuthContext.Provider value= {true}>
     <Router>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
         <div className="container">
@@ -45,8 +45,8 @@ function App(props) {
         <Route exact path="/" component={Home}>
           <PrivateRoute path = "/" component = {Home} />
         </Route>
-        <Route path="/events" component={Events}>
-        <PrivateRoute path = "/events" component = {Events} />
+        <Route path="/events" component={EventsPage}>
+        <PrivateRoute path = "/events" component = {EventsPage} />
         </Route>
         <Route path="/login" component={Login}>
         </Route>

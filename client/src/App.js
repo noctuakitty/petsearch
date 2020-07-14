@@ -23,19 +23,19 @@ function App(props) {
       <Router>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
           <div className="container">
-            <Link className="navbar-brand" href="/">Home</Link>
+            <Link className="navbar-brand" to="/">Home</Link>
           </div>
           <div className="container">
-            <Link className="navbar-brand" href="/login">Login</Link>
+            <Link className="navbar-brand" to="/login">Login</Link>
           </div>
           <div className="container">
-            <Link className="navbar-brand" href="/events">Events</Link>
+            <Link className="navbar-brand" to="/events">Events</Link>
           </div>
           <div className="container">
-            <Link className="navbar-brand" href="/search">Search</Link>
+            <Link className="navbar-brand" to="/search">Search</Link>
           </div>
           <div className="container">
-            <Link className="navbar-brand" href="/signup">Sign Up</Link>
+            <Link className="navbar-brand" to="/signup">Sign Up</Link>
           </div>
         </nav>
 

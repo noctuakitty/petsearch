@@ -2,29 +2,30 @@ import React, { Component } from "react";
 import api from "../../utils/api";
 
 class SignUp extends React.Component {
-    handleSubmit = (event) => {
-      event.preventDefault()
-      console.log("Name: " + event.target.elements.name.value)
-      console.log("Username: " + event.target.elements.username.value)
-      console.log("Email: " + event.target.elements.email.value)
-      console.log("Password: " + event.target.elements.password.value)
-      
-      const userData = {
-        name: event.target.elements.name.value,
-        username: event.target.elements.username.value,
-        email: event.target.elements.email.value,
-        password: event.target.elements.password.value
-      }
-      api.signUp(userData).then(res => {
-        window.location.href = "/login"
-      })
-      
+  handleSubmit = (event) => {
+    event.preventDefault()
+    console.log("Name: " + event.target.elements.name.value)
+    console.log("Username: " + event.target.elements.username.value)
+    console.log("Email: " + event.target.elements.email.value)
+    console.log("Password: " + event.target.elements.password.value)
+
+    const userData = {
+      name: event.target.elements.name.value,
+      username: event.target.elements.username.value,
+      email: event.target.elements.email.value,
+      password: event.target.elements.password.value
     }
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-            <h1>Sign Up</h1>
-            <label>
+    api.signUp(userData).then(res => {
+      window.location.href = "/login"
+    })
+
+  }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <h1>Sign Up</h1>
+        <div className="p-2 m-2 nameinput">
+          <label>
             Name:
             <input
               type="text"
@@ -32,6 +33,8 @@ class SignUp extends React.Component {
               ref={node => (this.inputNode = node)}
             />
           </label>
+        </div>
+        <div className="p-2 m-2 usernameinput">
           <label>
             Username:
             <input
@@ -40,6 +43,8 @@ class SignUp extends React.Component {
               ref={node => (this.inputNode = node)}
             />
           </label>
+        </div>
+        <div className="p-2 m-2 emailinput">
           <label>
             Email:
             <input
@@ -48,6 +53,8 @@ class SignUp extends React.Component {
               ref={node => (this.inputNode = node)}
             />
           </label>
+        </div>
+        <div className="p-2 m-2 passswordinput">
           <label>
             Password:
             <input
@@ -56,11 +63,16 @@ class SignUp extends React.Component {
               ref={node => (this.inputNode = node)}
             />
           </label>
+        </div>
+        <div className="p-2 m-2 signupbutton">
           <button type="submit">Submit</button>
-          <a href="/login">Already have an account login in here!</a>
-        </form>
-      )
-    }
+        </div>
+        <div className="p-2 m-2 link">
+          <a href="/login">Already have an account? Login in here!</a>
+        </div>
+      </form>
+    )
   }
+}
 
 export default SignUp;

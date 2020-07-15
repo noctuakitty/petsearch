@@ -26,16 +26,14 @@ frame {
   text-shadow: whitesmoke -1px 1px 0;
 }
 
-.form-control {
+.form-inline {
   text-align: center;
-  position: relative;
-  margin-left: 450px;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-dark {
   text-align: center;
   position: relative;
-  margin-left: 500px;
-  margin-right: auto;
+  margin: auto;
 }

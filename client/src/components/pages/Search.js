@@ -41,29 +41,29 @@ class Search extends Component {
         return (
             <div className="container">
                 <div className="row">
+
                     <div class="input-group mb-3">
-                        type:
+                        Type:
                         <input type="text" class="form-control" placeholder="Search for a Pet" aria-label="type" aria-describedby="button-addon2" onChange={this.handleInputChange} value={this.state.type} name="type"></input>
-
-                        location:
+                            Location:
                         <input type="text" class="form-control" placeholder="Search for a Pet" aria-label="location" aria-describedby="button-addon2" onChange={this.handleInputChange} value={this.state.location} name="location"></input>
-
-                        breeds:
+                            Breed:
                         <input type="text" class="form-control" placeholder="Search for a Pet" aria-label="breeds" aria-describedby="button-addon2" onChange={this.handleInputChange} value={this.state.breeds} name="breeds"></input>
-
                         <div class="input-group-append">
-                            <button onClick={this.handleFormSubmit} class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                            <button onClick={this.handleFormSubmit} class="btn btn-dark my-2 my-sm-0 m-2" type="button" id="button-addon2">Search</button>
                         </div>
                     </div>
                 </div>
                 <div className="container">
                     {this.state.pets.map(pet => (
-                        <PetCard name={pet.name} species={pet.species} breeds={pet.breeds.primary} />
+                        <PetCard
+                            name={pet.name}
+                            species={pet.species}
+                            breeds={pet.breeds.primary}
+                        />
                         // <PetCard name={pet.name} image={pet.primary_photo_cropped} species={pet.type} breeds={pet.breeds} />
-
                     ))}
                 </div>
-
             </div>
         )
     }

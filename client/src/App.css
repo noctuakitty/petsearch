@@ -27,13 +27,39 @@ frame {
 }
 
 .form-inline {
+  font-family: 'Galada', cursive;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
 .btn-dark {
+  font-family: 'Galada', cursive;
   text-align: center;
   position: relative;
+  margin: auto;
+}
+
+/* .inputType, 
+.localeInput,
+.breedInput,
+.inputbutton { */
+input-group {
+  font-family: 'Galada', cursive;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+nav {
+  margin-bottom: 125px;
+}
+
+#petcard {
+  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: auto;
 }

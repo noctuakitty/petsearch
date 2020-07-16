@@ -14,6 +14,30 @@ const events = [
         title: 'test event',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, doloribus velit aperiam earum accusamus unde totam alias necessitatibus expedita cum ad fugiat soluta ab sit aliquid magnam in quisquam? Maiores.',
     },
+    {
+        start: '2020-07-19',
+        end: '2020-07-25',
+        title: 'test event',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, doloribus velit aperiam earum accusamus unde totam alias necessitatibus expedita cum ad fugiat soluta ab sit aliquid magnam in quisquam? Maiores.',
+    },
+    {
+        start: '2020-07-19',
+        end: '2020-07-25',
+        title: 'test event',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, doloribus velit aperiam earum accusamus unde totam alias necessitatibus expedita cum ad fugiat soluta ab sit aliquid magnam in quisquam? Maiores.',
+    },
+    {
+        start: '2020-07-19',
+        end: '2020-07-25',
+        title: 'test event',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, doloribus velit aperiam earum accusamus unde totam alias necessitatibus expedita cum ad fugiat soluta ab sit aliquid magnam in quisquam? Maiores.',
+    },
+    {
+        start: '2020-07-19',
+        end: '2020-07-25',
+        title: 'test event',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, doloribus velit aperiam earum accusamus unde totam alias necessitatibus expedita cum ad fugiat soluta ab sit aliquid magnam in quisquam? Maiores.',
+    },
 ];
 
 console.log(events);

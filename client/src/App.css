@@ -57,9 +57,18 @@ nav {
   margin-bottom: 125px;
 }
 
-#petcard {
+.input-group {
+  font-family: "Galada", cursive;
+  width: 100px;
   text-align: center;
   display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#petcard {
+  text-align: center;
+  display: inline-block;
   justify-content: center;
   margin: auto;
 }

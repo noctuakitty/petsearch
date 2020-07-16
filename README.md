@@ -23,5 +23,23 @@ Set up adoption appointments, search for adoptable pets near user, search for ad
 React-Event-Calendar
 Passport
 
+# API
+Petfinder - you will need to get a key for this in order to work as we have hidden our keys within a .env file which you will need to create and have the following code:
+//
+SESSION_SECRET=secret
+REACT_APP_API_KEY = ""
+REACT_APP_API_SECRET = ""
+//
+
 # Wants for Future:
 Pet Blog, customizable profile, Events API, Lost and Found section, Geo-Location, Adoption Counter. 
+
+# Installation
+1. Clone Repo: git@github.com:norwayflames/petsearch.git
+2. run NPM install
+3. create a .env file
+4. obtain API key and place in .env file: https://www.petfinder.com/developers/api-docs
+5. un-comment line 4 to on the "routes/apiRoutes.js" file in order to run locally and test. 
+6. When launching to Heroku you must comment the above step out again. 
+
+

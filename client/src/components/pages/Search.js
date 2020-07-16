@@ -41,10 +41,13 @@ class Search extends Component {
   render() {
     return (
       <div className="container">
+        <div className="jumbotron">
+          <h1>Find for Fluffy here!</h1>
+        </div>
         <div className="row">
           <div class="input-group mb-3">
             type:
-            <div>
+            <div className="p-2 m-2 pet-search">
               <input
                 type="text"
                 class="form-control"
@@ -57,40 +60,46 @@ class Search extends Component {
               ></input>
             </div>
             location:
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Zip Code"
-              aria-label="location"
-              aria-describedby="button-addon2"
-              onChange={this.handleInputChange}
-              value={this.state.location}
-              name="location"
-            ></input>
+            <div className="p-2 m-2 pet-location">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Zip Code"
+                aria-label="location"
+                aria-describedby="button-addon2"
+                onChange={this.handleInputChange}
+                value={this.state.location}
+                name="location"
+              ></input>
+            </div>
             breeds:
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Ex: Yorkie"
-              aria-label="breeds"
-              aria-describedby="button-addon2"
-              onChange={this.handleInputChange}
-              value={this.state.breeds}
-              name="breeds"
-            ></input>
+            <div className="p-2 m-2 pet-breed">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ex: Yorkie"
+                aria-label="breeds"
+                aria-describedby="button-addon2"
+                onChange={this.handleInputChange}
+                value={this.state.breeds}
+                name="breeds"
+              ></input>
+            </div>
             <div class="input-group-append">
-              <button
-                onClick={this.handleFormSubmit}
-                class="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                Search
-              </button>
+              <div className="search-button">
+                <button
+                  onClick={this.handleFormSubmit}
+                  class="btn btn-dark my-2 my-sm-0 m-2"
+                  type="button"
+                  id="button-addon2"
+                >
+                  Search for pets
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container" id="petcard">
           {this.state.pets.map((pet) => (
             <PetCard
               name={pet.name}

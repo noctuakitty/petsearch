@@ -3,23 +3,22 @@ import api from "../../utils/api";
 
 class SignUp extends React.Component {
   handleSubmit = (event) => {
-    event.preventDefault()
-    console.log("Name: " + event.target.elements.name.value)
-    console.log("Username: " + event.target.elements.username.value)
-    console.log("Email: " + event.target.elements.email.value)
-    console.log("Password: " + event.target.elements.password.value)
+    event.preventDefault();
+    console.log("Name: " + event.target.elements.name.value);
+    console.log("Username: " + event.target.elements.username.value);
+    console.log("Email: " + event.target.elements.email.value);
+    console.log("Password: " + event.target.elements.password.value);
 
     const userData = {
       name: event.target.elements.name.value,
       username: event.target.elements.username.value,
       email: event.target.elements.email.value,
       password: event.target.elements.password.value
-    }
-    api.signUp(userData).then(res => {
-      window.location.href = "/login"
-    })
-
-  }
+    };
+    api.signUp(userData).then((res) => {
+      window.location.href = "/login";
+    });
+  };
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
@@ -30,7 +29,7 @@ class SignUp extends React.Component {
             <input
               type="text"
               name="name"
-              ref={node => (this.inputNode = node)}
+              ref={(node) => (this.inputNode = node)}
             />
           </label>
         </div>
@@ -40,7 +39,7 @@ class SignUp extends React.Component {
             <input
               type="text"
               name="username"
-              ref={node => (this.inputNode = node)}
+              ref={(node) => (this.inputNode = node)}
             />
           </label>
         </div>
@@ -50,7 +49,7 @@ class SignUp extends React.Component {
             <input
               type="text"
               name="email"
-              ref={node => (this.inputNode = node)}
+              ref={(node) => (this.inputNode = node)}
             />
           </label>
         </div>
@@ -60,18 +59,18 @@ class SignUp extends React.Component {
             <input
               type="password"
               name="password"
-              ref={node => (this.inputNode = node)}
+              ref={(node) => (this.inputNode = node)}
             />
           </label>
         </div>
-        <div className="p-2 m-2 signupbutton">
+        <div className="btn btn-dark my-2 my-sm-0">
           <button type="submit">Submit</button>
         </div>
         <div className="p-2 m-2 link">
           <a href="/login">Already have an account? Login in here!</a>
         </div>
       </form>
-    )
+    );
   }
 }
 

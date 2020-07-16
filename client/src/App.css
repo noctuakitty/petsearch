@@ -52,7 +52,7 @@ nav {
 
 #petcard {
   text-align: center;
-  /* display: flex;
-  justify-content: center; */
+  display: inline-block;
+  justify-content: center;
   margin: auto;
 }

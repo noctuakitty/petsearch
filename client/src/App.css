@@ -2,10 +2,9 @@
 body,
 .container,
 form,
-nav
-  {
+nav {
   text-align: center;
-  font-family: 'Galada', cursive;
+  font-family: "Galada", cursive;
   color: black;
   text-shadow: whitesmoke -1px 1px 0;
 }
@@ -21,7 +20,7 @@ body {
 .jumbotron,
 frame {
   text-align: center;
-  font-family: 'Galada', cursive;
+  font-family: "Galada", cursive;
   color: black;
   text-shadow: whitesmoke -1px 1px 0;
 }
@@ -36,4 +35,20 @@ frame {
   text-align: center;
   position: relative;
   margin: auto;
+}
+
+nav {
+  margin-bottom: 125px;
+}
+
+.input-group {
+  font-family: "Galada", cursive;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+#petcard {
+  margin-left: 40px;
 }

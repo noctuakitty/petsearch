@@ -16,6 +16,7 @@ console.log(client);
 router.post("/api/petfinder", function (req, res) {
   client.animal
     .search({
+      // image: response.body.animals.photos[0],
       type: req.body.type,
       location: req.body.location,
       breeds: {

@@ -2,9 +2,10 @@
 body,
 .container,
 form,
-nav {
+nav
+  {
   text-align: center;
-  font-family: "Galada", cursive;
+  font-family: 'Galada', cursive;
   color: black;
   text-shadow: whitesmoke -1px 1px 0;
 }
@@ -20,20 +21,35 @@ body {
 .jumbotron,
 frame {
   text-align: center;
-  font-family: "Galada", cursive;
+  font-family: 'Galada', cursive;
   color: black;
   text-shadow: whitesmoke -1px 1px 0;
 }
 
 .form-inline {
+  font-family: 'Galada', cursive;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
 .btn-dark {
+  font-family: 'Galada', cursive;
   text-align: center;
   position: relative;
+  margin: auto;
+}
+
+/* .inputType, 
+.localeInput,
+.breedInput,
+.inputbutton { */
+input-group {
+  font-family: 'Galada', cursive;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: auto;
 }
 

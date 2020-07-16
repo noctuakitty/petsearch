@@ -4,7 +4,7 @@ function PetCard(props) {
   console.log(props);
   return (
     <div className="row" id="petcard">
-      <div className="col-md-4">
+      <div className="col-md-4 col-sm-4 col-lg-4">
         <div>
           <img src={props.image}></img>
           <p>

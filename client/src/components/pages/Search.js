@@ -4,7 +4,7 @@ import PetCard from "../PetCard";
 
 class Search extends Component {
   state = {
-    image: "",
+    // image: "",
     type: "",
     location: "",
     breeds: "",
@@ -99,17 +99,13 @@ class Search extends Component {
             </div>
           </div>
         </div>
-        <div className="container" id="petcard">
+        <div className="container">
           {this.state.pets.map((pet) => (
             <PetCard
               name={pet.name}
               species={pet.species}
               breeds={pet.breeds.primary}
-              // image={
-              //   pet.animals[0].primary_photo_cropped
-              //     ? pet.data.animals[0].primary_photo_cropped.small
-              //     : "https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483296.jpg"
-              // }
+              image= {"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/48503602/1/?bust=1594862715&width=300"}
             />
             // <PetCard name={pet.name} image={pet.primary_photo_cropped} species={pet.type} breeds={pet.breeds} />
           ))}

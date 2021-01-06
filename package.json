@@ -29,7 +29,7 @@
   "homepage": "https://github.com/norwayflames/petsearch#readme",
   "dependencies": {
     "@petfinder/petfinder-js": "^1.0.6",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.0",
